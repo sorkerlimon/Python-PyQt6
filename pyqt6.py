@@ -188,54 +188,91 @@
 
 
 
-
+######## Button chnages code
+######## Button chnages code
 from PyQt6.QtWidgets import QApplication,QMainWindow,QPushButton
 import sys
 from random import choice
 
-window_titles = [
-    'My App',
-    'My software',
-    'My abrar',
-    'My tasnim',
-    'My nawshin',
-    'My rafi',
-    'My sorker',
-    'My sadia',
-    'My limon',
-    'Something went wrong',
-]
+# window_titles = [
+#     'My App',
+#     'My software',
+#     'My abrar',
+#     'My tasnim',
+#     'My nawshin',
+#     'My rafi',
+#     'My sorker',
+#     'My sadia',
+#     'My limon',
+#     'Something went wrong',
+# ]
 
-class MainWindow(QMainWindow):
-    def __init__(self):
-        super().__init__()
-        self.n_times_clicked = 0
-        self.setWindowTitle("My Application")
-        self.button = QPushButton("Press Me!")
-        self.button.clicked.connect(self.the_button_was_clicked)
-        self.windowTitleChanged.connect(self.the_window_tittle_change)
-        self.setCentralWidget(self.button)
+# class MainWindow(QMainWindow):
+#     def __init__(self):
+#         super().__init__()
+#         self.n_times_clicked = 0
+#         self.setWindowTitle("My Application")
+#         self.button = QPushButton("Press Me!")
+#         self.button.clicked.connect(self.the_button_was_clicked)
+#         self.windowTitleChanged.connect(self.the_window_tittle_change)
+#         self.setCentralWidget(self.button)
+#
+#     def the_button_was_clicked(self):
+#         print("Clicked")
+#         new_window_tittle = choice(window_titles)
+#         self.setWindowTitle(new_window_tittle)
+#
+#
+#     def the_window_tittle_change(self,window_tittle):
+#         print("Window tittlechanged: %s "% window_tittle)
+#
+#         if window_tittle == "Something went wrong":
+#             self.button.setDisabled(True)
+#
+#
+# app = QApplication(sys.argv)
+#
+# window = MainWindow()
+# window.show()
+#
+# app.exec()
 
-    def the_button_was_clicked(self):
-        print("Clicked")
-        new_window_tittle = choice(window_titles)
-        self.setWindowTitle(new_window_tittle)
 
 
-    def the_window_tittle_change(self,window_tittle):
-        print("Window tittlechanged: %s "% window_tittle)
+######### QLine edit and QVBoxLayout
 
-        if window_tittle == "Something went wrong":
-            self.button.setDisabled(True)
-
-
-app = QApplication(sys.argv)
-
-window = MainWindow()
-window.show()
-
-app.exec()
-
+# from PyQt6.QtWidgets import QApplication,QMainWindow,QLabel,QLineEdit,QVBoxLayout,QWidget
+# import sys
+#
+# class MainWindow(QMainWindow):
+#      def __init__(self):
+#          super().__init__()
+#
+#          self.setWindowTitle("My Applicatio")
+#          self.label = QLabel()
+#          self.input = QLineEdit()
+#          self.input.textChanged.connect(self.label.setText)
+#
+#
+#          layout = QVBoxLayout()
+#          layout.addWidget(self.input)
+#          layout.addWidget(self.label)
+#
+#
+#          container = QWidget()
+#          container.setLayout(layout)
+#          self.setCentralWidget(container)
+#
+#
+#
+#
+#
+# app = QApplication(sys.argv)
+#
+# window = MainWindow()
+# window.show()
+#
+# app.exec()
 
 
 
